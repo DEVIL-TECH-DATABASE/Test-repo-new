@@ -1,0 +1,55 @@
+const fs = require('fs');
+if (fs.existsSync('config.env')) require('dotenv').config({ path: './config.env' });
+function convertToBool(text, fault = 'true') {
+    return text === fault ? true : false;
+}
+module.exports = {
+
+SESSION_ID: process.env.SESSION_ID === undefined ? '𝐃ᴇᴠɪʟ-𝐓ᴇᴄʜ-𝐌ᴅ=AlRyADJQ#iYyh7oF0pUU6_DhEBeP55YbGmVV8__20WhR6mkOrYe4' : process.env.SESSION_ID,
+PREFIX: process.env.PREFIX || '.' ,
+AUTO_READ_STATUS: process.env.AUTO_READ_STATUS === undefined ?"true" : process.env.AUTO_READ_STATUS,
+AUTO_REACT_STATUS: process.env.AUTO_REACT_STATUS === undefined ?"true" : process.env.AUTO_REACT_STATUS,
+MODE: process.env.MODE === undefined ?"public" : process.env.MODE,
+BUTTON: process.env.BUTTON === undefined ?"button" : process.env.BUTTON,
+AUTO_VOICE: process.env.AUTO_VOICE === undefined ? "false" : process.env.AUTO_VOICE,
+AUTO_VOICE2: process.env.AUTO_VOICE2 === undefined ? "true" : process.env.AUTO_VOICE2,
+AUTO_REPLY: process.env.AUTO_REPLY === undefined ? "false" : process.env.AUTO_REPLY,
+AI_REPLAY: process.env.AI_REPLAY === undefined ? "false" : process.env.AI_REPLAY,//AI_REPLAY KARANA KOTASA ADD KARA
+AUTO_STICKER: process.env.AUTO_STICKER === undefined ? "false" : process.env.AUTO_STICKER,
+ANTI_BAD: process.env.ANTI_BAD === undefined ? "false" : process.env.ANTI_BAD,
+ANTI_LINK: process.env.ANTI_LINK === undefined ? "false" : process.env.ANTI_LINK,
+ANTI_CALL: process.env.ANTI_CALL === undefined ? "false" : process.env.ANTI_CALL,    
+DELETEMSGSENDTO : process.env.DELETEMSGSENDTO === undefined ? '' : process.env.DELETEMSGSENDTO,
+ANTI_DELETE : process.env.ANTI_DELETE === undefined ? 'true' : process.env.ANTI_DELETE,
+ANTI_BOT: process.env.ANTI_BOT === undefined ? "false" : process.env.ANTI_BOT,
+ONLY_ME: process.env.ONLY_ME === undefined ? "false" : process.env.ONLY_ME,
+ONLY_GROUP: process.env.ONLY_GROUP === undefined ? "false" : process.env.ONLY_GROUP,
+READ_MESSAGE: process.env.READ_MESSAGE === undefined ? "false" : process.env.READ_MESSAGE,
+ALWAYS_OFFLINE: process.env.ALWAYS_OFFLINE === undefined ? "false" : process.env.ALWAYS_OFFLINE,
+ALWAYS_ONLINE: process.env.ALWAYS_ONLINE === undefined ? "true" : process.env.ALWAYS_ONLINE,
+READ_CMD: process.env.READ_CMD === undefined ? "false" : process.env.READ_CMD,
+FAKE_RECORDING: process.env.FAKE_RECORDING === undefined ? "true" : process.env.FAKE_RECORDING,
+AUTO_BIO: process.env.AUTO_BIO === undefined ? "true" : process.env.AUTO_BIO,
+AUTO_TYPING: process.env.AUTO_TYPING === undefined ? "false" : process.env.AUTO_TYPING,    
+AI_CHAT: process.env.AI_CHAT === undefined ? "false" : process.env.AI_CHAT,
+AUTO_REACT: process.env.AUTO_REACT === undefined ? "false" : process.env.AUTO_REACT,
+BAD_NO_BLOCK: process.env.BAD_NO_BLOCK === undefined ? "false" : process.env.BAD_NO_BLOCK,
+NEWS_SEND_JID: process.env.NEWS_SEND_JID === undefined ? "" : process.env.NEWS_SEND_JID,
+AUTO_NEWS_SENDER: process.env.AUTO_NEWS_SENDER === undefined ? "false" : process.env.AUTO_NEWS_SENDER,
+TIKTOK_SEND_JID: process.env.TIKTOK_SEND_JID === undefined ? "" : process.env.TIKTOK_SEND_JID,
+AUTO_TIKTOK_SENDER: process.env.AUTO_TIKTOK_SENDER === undefined ? "false" : process.env.AUTO_TIKTOK_SENDER,
+WELCOME_GOODBYE: process.env.WELCOME_GOODBYE === undefined ? "false" : process.env.WELCOME_GOODBYE,
+POSTGRESQL_URL: process.env.POSTGRESQL_URL === undefined ? 'postgresql://postgres:@Asitha2005b@db.waiqbrnuxkjebghzhovz.supabase.co:5432/postgres' : process.env.POSTGRESQL_URL,
+FOOTER:  process.env.FOOTER  || '➠ *𝐃ᴇᴠɪʟ 𝐓ᴇᴄʜ 𝐌ᴅ 𝐑ᴇᴘᴏ :*\n*https://github.com/paka235/DEVIL-TECH-MD*\n\n> *© ᴘᴏᴡᴇʀᴅ ʙʏ ᴅᴀʀᴋ ᴛᴇᴄʜ ᴢᴏɴᴇ™❗*',
+FOOTERTT:  process.env.FOOTERTT  || '> *© ᴘᴏᴡᴇʀᴅ ʙʏ ᴅᴀʀᴋ ᴛᴇᴄʜ ᴢᴏɴᴇ™❗*',
+FOOTER_SONG:  process.env.FOOTER_SONG  || '> *© ᴘᴏᴡᴇʀᴅ ʙʏ ᴅᴀʀᴋ ᴛᴇᴄʜ ᴢᴏɴᴇ™❗*',
+FOOTER_VIDEO:  process.env.FOOTER_VIDEO  || '> *© ᴘᴏᴡᴇʀᴅ ʙʏ ᴅᴀʀᴋ ᴛᴇᴄʜ ᴢᴏɴᴇ™❗*',
+FOOTER_SONG2:  process.env.FOOTER_SONG2  || '> *© ᴘᴏᴡᴇʀᴅ ʙʏ ᴅᴀʀᴋ ᴛᴇᴄʜ ᴢᴏɴᴇ™❗*',
+FOOTER_VIDEO2:  process.env.FOOTER_VIDEO2  || '> *© ᴘᴏᴡᴇʀᴅ ʙʏ ᴅᴀʀᴋ ᴛᴇᴄʜ ᴢᴏɴᴇ™❗*',
+FOOTER_CSONG:  process.env.FOOTER_CSONG  || '*© ᴘᴏᴡᴇʀᴅ ʙʏ ᴅᴀʀᴋ ᴛᴇᴄʜ ᴢᴏɴᴇ™❗*',
+CHANEL_LINK:  process.env.CHANEL_LINK  || '*https://whatsapp.com/channel/0029VbAYmQkGufJ5e0ZOQX41*',
+LOGO: process.env.LOGO === undefined ? 'https://files.catbox.moe/nk9i3y.jpg' : process.env.LOGO,   
+JID: process.env.JID || "120363418887684728@newsletter",
+LANG: process.env.LANG === undefined ? "SL" : process.env.LANG,
+MAX_SIZE: 500
+};
